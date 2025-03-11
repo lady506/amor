@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #131212;
+    margin: 0;
+}
+
+.container {
+    position: relative;
+}
+
+.glass {
+    width: 200px;
+    height: 300px;
+    background: rgb(2, 2, 2);
+    border-radius: 50% / 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgba(247, 247, 247, 0.432);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgb(3, 3, 3);
+    position: relative;
+    overflow: hidden;
+}
+
+.rose {
+    width: 80%;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        filter: drop-shadow(0 0 5px rgb(20, 20, 20));
+    }
+    to {
+        filter: drop-shadow(0 0 15px rgba(187, 1, 1, 0.801));
+    }
+}
+.petals-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.petal {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(206, 31, 31, 0.8);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-10%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* styles.css */
+
+/* Estilo para el texto cursivo */
+footer i {
+    font-style: italic; /* Aplica el estilo cursiva */
+    position: fixed;
+    bottom: 25px; /* Ubica el texto 20px desde el borde inferior */
+    left: 50%;
+    transform: translateX(-50%); /* Centra el texto horizontalmente */
+    font-size: 25px; /* Tamaño de la fuente */
+    color: #ffffff; /* Color del texto */
+}
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.heart {
+    position: absolute;
+    color: red;
+    font-size: 24px;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
